@@ -1,14 +1,15 @@
 import React from "react";
+import Header from "./Header"
 
-function Menu() {
+function Menu({onDarkMode, onCheck}) {
   return (
     <div className="menu item">
       <div className="ui toggle checkbox">
         <input
           type="checkbox"
           name="public"
-          checked={false}
-          onChange={() => console.log("toggle")}
+          checked={onCheck}
+          onChange={onDarkMode}
         />
         <label>Toggle Dark Mode</label>
       </div>
